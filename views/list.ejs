@@ -1,0 +1,22 @@
+<%- include("header") -%>
+  <body>
+
+<div class="box" id = "heading" >
+  <h1> Hey its <%= place %> today </h1>
+  <h2>Today's List</h2>
+</div>
+<div class="box">
+  <% for(var i=0;i<myarray.length;i++){ %>
+    <div class="item">
+     <input type="checkbox">
+      <p><%= myarray[i]%></p>
+    </div>
+      <%}%>
+
+<form class="item" action="/" method="post">
+  <input type="text" name="newItem" placeholder="Add Item" autocomplete="off">
+  <button type="submit" class= "button" name ="listName" value= <%= place %>>+</button>
+</form>
+</div>
+</body>
+<%- include("footer") -%>
